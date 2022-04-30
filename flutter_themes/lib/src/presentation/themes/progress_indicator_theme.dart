@@ -4,6 +4,8 @@
 
 import 'package:flutter/material.dart';
 
-PopupMenuThemeData appLightPopupMenuThemeData = PopupMenuThemeData();
+ProgressIndicatorThemeData appLightProgressIndicatorThemeData =
+    ProgressIndicatorThemeData();
 
-PopupMenuThemeData appDarkPopupMenuThemeData = PopupMenuThemeData();
+ProgressIndicatorThemeData appDarkProgressIndicatorThemeData =
+    ProgressIndicatorThemeData();

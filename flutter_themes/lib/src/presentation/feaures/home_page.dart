@@ -7,7 +7,19 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:size_helper/size_helper.dart';
 
-class Home extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  List<bool> isPressed = [false, false, false, false, false];
+
+  List<bool> getInitial() {
+    final List<bool> isPressed = [false, false, false, false, false];
+    return isPressed;
+  }
+
   Widget mobileDrawer(BuildContext context) {
     // per MD3 Drawer ThemeData is set to
     // standard for elevation etc so we change
@@ -20,35 +32,23 @@ class Home extends StatelessWidget {
         // Per MD3 should be setting specific ListTile Theme
         // properties to modal Drawer specifics.
         // https://m3.material.io/components/navigation-drawer/specs
-        
-          child: ListView(
-            children: [
-              ListTile(
-                
-                selected: true,
-                leading: const Icon(Icons.home),
-                title: Text(
-                  "Home",
-                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                        color: Theme.of(context).colorScheme.onPrimary,
-                      ),
-                ),
+
+        child: ListView(
+          children: [
+            ListTile(
+              selected: true,
+              leading: const Icon(Icons.home),
+              title: Text(
+                "Home",
+                style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                      color: Theme.of(context).colorScheme.onPrimary,
+                    ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-      
+      ),
     );
-  }
-  // number of action icons
-  List<bool> isPressed = [false, false, false, false, false];
-
-
-  // so we reset buttons that way only one button at a time shows pressed
-  // state in our actions button list row of buttons
-  List<bool> getInitial() {
-    final List<bool> isPressed = [false, false, false, false, false];
-    return isPressed;
   }
 
   @override
@@ -105,6 +105,7 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
+
       desktopSmall: (_) => Scaffold(
         appBar: AppBar(
           leadingWidth: 156,
@@ -115,105 +116,152 @@ class Home extends StatelessWidget {
           actionsIconTheme: IconThemeData(
             color: Theme.of(context).colorScheme.onSurface,
           ),
-          
+
           // actions is actually a Row, so need to expand flex wrap items that
           // have infinite widths such as list tile
           actions: [
-
-            
-
-            ElevatedButton.icon(
-              onPressed:  () {
-                log("pressed");
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  if (isPressed[0] == false) {
+                    isPressed = getInitial();
+                    isPressed[0] = true;
+                  } else {
+                    isPressed[0] = false;
+                  }
+                });
               },
-              label: Text(
-                "Home",
-                style: Theme.of(context).textTheme.labelLarge,
-              ),
-              icon: Icon(
-                Icons.home,
-                color: Theme.of(context).colorScheme.onSurface,
-                size: 24,
+              child: ElevatedButton.icon(
+                onPressed: () {
+                  log("pressed");
+                },
+                label: Text(
+                  "Home",
+                  style: Theme.of(context).textTheme.labelLarge,
                 ),
+                icon: Icon(
+                  Icons.home,
+                  color: isPressed[0] == false
+                      ? Theme.of(context).colorScheme.onSurface
+                      : Theme.of(context).colorScheme.primary,
+                  size: 24,
+                ),
+              ),
             ),
-
-            ElevatedButton.icon(
-              onPressed: () {
-                log("pressed");
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  if (isPressed[1] == false) {
+                    isPressed = getInitial();
+                    isPressed[1] = true;
+                  } else {
+                    isPressed[1] = false;
+                  }
+                });
               },
-              label: Text(
-                "About",
-                style: Theme.of(context).textTheme.labelLarge,
-              ),
-              icon: Icon(
-                Icons.info,
-                color: Theme.of(context).colorScheme.onSurface,
-                size: 24,
+              child: ElevatedButton.icon(
+                onPressed: () {
+                  log("pressed");
+                },
+                label: Text(
+                  "About",
+                  style: Theme.of(context).textTheme.labelLarge,
+                ),
+                icon: Icon(
+                  Icons.info,
+                  color: isPressed[1] == false
+                      ? Theme.of(context).colorScheme.onSurface
+                      : Theme.of(context).colorScheme.primary,
+                  size: 24,
+                ),
               ),
             ),
-            ElevatedButton.icon(
-              onPressed: () {
-                log("pressed");
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  if (isPressed[2] == false) {
+                    isPressed = getInitial();
+                    isPressed[2] = true;
+                  } else {
+                    isPressed[2] = false;
+                  }
+                });
               },
-              label: Text(
-                "UIKits",
-                style: Theme.of(context).textTheme.labelLarge,
-              ),
-              icon: Icon(
-                Icons.design_services,
-                color: Theme.of(context).colorScheme.onSurface,
-                size: 24,
+              child: ElevatedButton.icon(
+                onPressed: () {
+                  log("pressed");
+                },
+                label: Text(
+                  "UIKits",
+                  style: Theme.of(context).textTheme.labelLarge,
+                ),
+                icon: Icon(
+                  Icons.design_services,
+                  color: isPressed[2] == false
+                      ? Theme.of(context).colorScheme.onSurface
+                      : Theme.of(context).colorScheme.primary,
+                  size: 24,
+                ),
               ),
             ),
-            ElevatedButton.icon(
-              onPressed: () {
-                log("pressed");
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  if (isPressed[3] == false) {
+                    isPressed = getInitial();
+                    isPressed[3] = true;
+                  } else {
+                    isPressed[3] = false;
+                  }
+                });
               },
-              label: Text(
-                "Books",
-                style: Theme.of(context).textTheme.labelLarge,
-              ),
-              icon: Icon(
-                Icons.book,
-                color: Theme.of(context).colorScheme.onSurface,
-                size: 24,
+              child: ElevatedButton.icon(
+                onPressed: () {
+                  log("pressed");
+                },
+                label: Text(
+                  "Books",
+                  style: Theme.of(context).textTheme.labelLarge,
+                ),
+                icon: Icon(
+                  Icons.book,
+                  color: isPressed[3] == false
+                      ? Theme.of(context).colorScheme.onSurface
+                      : Theme.of(context).colorScheme.primary,
+                  size: 24,
+                ),
               ),
             ),
-            ElevatedButton.icon(
-              onPressed: () {
-                log("pressed");
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  if (isPressed[4] == false) {
+                    isPressed = getInitial();
+                    isPressed[4] = true;
+                  } else {
+                    isPressed[4] = false;
+                  }
+                });
               },
-              label: Text(
-                "Projects",
-                style: Theme.of(context).textTheme.labelLarge,
-              ),
-              icon: Icon(
-                Icons.build,
-                color: Theme.of(context).colorScheme.onSurface,
-                size: 24,
+              child: ElevatedButton.icon(
+                onPressed: () {
+                  log("pressed");
+                },
+                label: Text(
+                  "Projects",
+                  style: Theme.of(context).textTheme.labelLarge,
+                ),
+                icon: Icon(
+                  Icons.build,
+                  color: isPressed[4] == false ? Theme.of(context).colorScheme.onSurface : Theme.of(context).colorScheme.primary,
+                  size: 24,
+                ),
               ),
             ),
-
-
-            
-
-
-            
-
-            
-
-
-            
             
           ],
         ),
       ),
-    
-      
-      
-      
-      
-      
     );
   }
 }

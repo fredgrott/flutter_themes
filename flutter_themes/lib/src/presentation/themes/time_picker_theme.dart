@@ -53,6 +53,27 @@ TimePickerThemeData appDarkTimePickerThemeData = TimePickerThemeData(
   dialTextColor: appDarkColorScheme.secondaryContainer,
   dialBackgroundColor: appDarkColorScheme.secondary,
   entryModeIconColor: appDarkColorScheme.primaryContainer,
+  helpTextStyle: appDarkHelpTextStyle,
+  hourMinuteShape: const SquircleBorder(
+    radius: BorderRadius.all(
+      Radius.circular(10.0),
+    ),
+  ),
+  hourMinuteTextStyle: appDarkHourMinuteTextStyle,
+  dayPeriodBorderSide: BorderSide(
+    color: Color.alphaBlend(appDarkColorScheme.onBackground.withOpacity(0.38),
+        appDarkColorScheme.surface),
+  ),
+  dayPeriodShape: const RoundedRectangleBorder(
+    borderRadius: BorderRadius.all(Radius.circular(4.0)),
+    side: BorderSide(),
+  ),
+  dayPeriodTextStyle: appDarkDayPeriodTextStyle,
+  shape: const SquircleBorder(
+    radius: BorderRadius.all(
+      Radius.circular(10.0),
+    ),
+  ),
 );
 
 
@@ -72,4 +93,19 @@ TextStyle appLightDayPeriodTextStyle = TextStyle(
   fontFamily: GoogleFonts.montserratAlternates().fontFamily,
   fontWeight: FontWeight.w300,
 
+);
+
+TextStyle appDarkHelpTextStyle = TextStyle(
+  fontFamily: GoogleFonts.montserratAlternates().fontFamily,
+  fontWeight: FontWeight.w300,
+);
+
+TextStyle appDarkHourMinuteTextStyle = TextStyle(
+  fontFamily: GoogleFonts.montserratAlternates().fontFamily,
+  fontWeight: FontWeight.w300,
+);
+
+TextStyle appDarkDayPeriodTextStyle = TextStyle(
+  fontFamily: GoogleFonts.montserratAlternates().fontFamily,
+  fontWeight: FontWeight.w300,
 );

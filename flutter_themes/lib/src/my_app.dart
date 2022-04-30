@@ -5,7 +5,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_themes/src/localization_gen/l10n.dart';
-import 'package:flutter_themes/src/presentation/feaures/home.dart';
+
+import 'package:flutter_themes/src/presentation/feaures/home_page.dart';
 import 'package:flutter_themes/src/presentation/themes/theme_data.dart';
 
 class MyApp extends StatelessWidget {
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
       theme: appLightThemeData,
       darkTheme: appDarkThemeData,
       themeMode: ThemeMode.dark,
-      home: Home(),
+      home: HomePage(),
     );
   }
 }

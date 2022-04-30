@@ -59,6 +59,10 @@ final ButtonStyle appMaterialLightButtonStyle = ButtonStyle(
     appLightColorScheme.shadow,
   ),
 
+  surfaceTintColor: ButtonStyleButton.allOrNull<Color>(
+    appLightColorScheme.primary,
+  ),
+
   //
   // fixedSize is always null, MD2
 
@@ -136,7 +140,7 @@ Color getMaterialLightOverlay(Set<MaterialState> states) {
     return appLightColorScheme.primary.withOpacity(draggedStateOpacity);
   }
 
-  return appLightColorScheme.surface.withOpacity(1);
+  return appLightColorScheme.primary.withOpacity(1);
 }
 
 Color getMaterialDarkOverlay(Set<MaterialState> states) {
@@ -154,7 +158,7 @@ Color getMaterialDarkOverlay(Set<MaterialState> states) {
   }
 
   // set as transparent
-  return appDarkColorScheme.surface.withOpacity(1);
+  return appDarkColorScheme.primary.withOpacity(1);
 }
 
 // MD3 Elevation values, enabled is 1, disabled is 0,
@@ -208,6 +212,10 @@ final ButtonStyle appMaterialDarkButtonStyle = ButtonStyle(
   overlayColor: MaterialStateProperty.resolveWith(getMaterialDarkOverlay),
   shadowColor: ButtonStyleButton.allOrNull<Color>(
     appDarkColorScheme.shadow,
+  ),
+
+  surfaceTintColor: ButtonStyleButton.allOrNull<Color>(
+    appDarkColorScheme.primary,
   ),
 
   // fixedSize is always null, MD2

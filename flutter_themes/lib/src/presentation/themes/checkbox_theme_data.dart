@@ -4,6 +4,6 @@
 
 import 'package:flutter/material.dart';
 
-PopupMenuThemeData appLightPopupMenuThemeData = PopupMenuThemeData();
+CheckboxThemeData appLightCheckboxThemeData = CheckboxThemeData();
 
-PopupMenuThemeData appDarkPopupMenuThemeData = PopupMenuThemeData();
+CheckboxThemeData appDarkCheckboxThemeData = CheckboxThemeData();

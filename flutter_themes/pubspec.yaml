@@ -23,6 +23,8 @@ dependencies:
   # localization automation
   intl_utils: ^2.4.0
   material_color_utilities: ^0.1.3
+  size_helper: ^1.1.1+4
+
       
             
  

@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 
-PopupMenuThemeData appLightPopupMenuThemeData = PopupMenuThemeData();
+ScrollbarThemeData appLightScrollbarThemeData = ScrollbarThemeData();
 
-PopupMenuThemeData appDarkPopupMenuThemeData = PopupMenuThemeData();
+ScrollbarThemeData appDarkScrollbarThemeData = ScrollbarThemeData();
+

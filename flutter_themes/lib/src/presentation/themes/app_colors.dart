@@ -5,10 +5,10 @@
 import 'package:flutter/material.dart';
 import 'package:material_color_utilities/material_color_utilities.dart';
 
-// Gist: The difference between App ColorScheme and Web App ColorScheme is that 
-//       we are not adjusting to the underlying ColorScheme changing based on 
-//       the OS system Theme colors like in mobile. Thus, we do not 
-//       harmonize the blend of Brand colors with the underlying color of 
+// Gist: The difference between App ColorScheme and Web App ColorScheme is that
+//       we are not adjusting to the underlying ColorScheme changing based on
+//       the OS system Theme colors like in mobile. Thus, we do not
+//       harmonize the blend of Brand colors with the underlying color of
 //       the UI component.
 
 const Color brandColorOne = Color(0xfff77f7f);
@@ -26,6 +26,11 @@ const Color lightSeed = Color(0xfff77f7f);
 final CorePalette lightCorePalette = CorePalette.of(lightSeed.value);
 
 final CorePalette darkModeFixCorePaletter = CorePalette.of(0xffddcfcf);
+
+// MD3 Modal need neutral variqnt 20
+Color appLightScrimColor = Color(lightCorePalette.neutralVariant.get(20)).withOpacity(0.40);
+
+Color appDarkScrimColor = Color(darkCorePalette.neutralVariant.get(20)).withOpacity(0.40);
 
 final ColorScheme appLightColorScheme = ColorScheme(
   brightness: Brightness.light,
@@ -77,31 +82,22 @@ final ColorScheme appDarkColorScheme = ColorScheme(
   onBackground: Color(darkCorePalette.neutral.get(90)),
   surface: Color(darkCorePalette.neutral.get(10)),
   onSurface: Color(darkModeFixCorePaletter.primary.get(90)),
-
   surfaceTint: Color(darkCorePalette.primary.get(80)),
   surfaceVariant: Color(darkCorePalette.neutralVariant.get(30)),
   secondaryContainer: Color(darkCorePalette.secondary.get(30)),
   shadow: Color(darkCorePalette.neutral.get(0)),
   onSecondaryContainer: Color(darkCorePalette.secondary.get(90)),
   onSurfaceVariant: Color(darkCorePalette.neutralVariant.get(80)),
-
   primaryContainer: Color(darkCorePalette.primary.get(30)),
   onPrimaryContainer: Color(darkCorePalette.primary.get(90)),
-
   tertiary: Color(darkCorePalette.tertiary.get(80)),
   onTertiary: Color(darkCorePalette.tertiary.get(20)),
   tertiaryContainer: Color(darkCorePalette.tertiary.get(30)),
   onTertiaryContainer: Color(darkCorePalette.tertiary.get(90)),
-
   errorContainer: Color(darkCorePalette.error.get(30)),
   onErrorContainer: Color(darkCorePalette.error.get(80)),
-
   inversePrimary: Color(darkCorePalette.primary.get(40)),
   inverseSurface: Color(darkCorePalette.neutral.get(90)),
   onInverseSurface: Color(darkCorePalette.neutral.get(20)),
   outline: Color(darkCorePalette.neutralVariant.get(60)),
-
-
-
-
 );

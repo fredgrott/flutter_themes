@@ -16,12 +16,14 @@ import 'package:flutter_themes/src/presentation/themes/bar_button_theme_data.dar
 import 'package:flutter_themes/src/presentation/themes/button_theme_data.dart';
 import 'package:flutter_themes/src/presentation/themes/card_theme_data.dart';
 import 'package:flutter_themes/src/presentation/themes/divider_theme_data.dart';
+import 'package:flutter_themes/src/presentation/themes/drawer_theme_data.dart';
 import 'package:flutter_themes/src/presentation/themes/elevated_button_theme_data.dart';
 import 'package:flutter_themes/src/presentation/themes/icon_theme_data.dart';
 import 'package:flutter_themes/src/presentation/themes/input_decoration_theme.dart';
 import 'package:flutter_themes/src/presentation/themes/list_tile_theme_data.dart';
 import 'package:flutter_themes/src/presentation/themes/outlined_button_theme_data.dart';
 import 'package:flutter_themes/src/presentation/themes/text_button_theme_data.dart';
+import 'package:flutter_themes/src/presentation/themes/text_selection_theme_data.dart';
 import 'package:flutter_themes/src/presentation/themes/text_theme.dart';
 import 'package:flutter_themes/src/presentation/themes/theme_defaults.dart';
 import 'package:flutter_themes/src/presentation/themes/tooltip_theme_data.dart';
@@ -79,7 +81,8 @@ ThemeData appLightThemeData = ThemeData(
   listTileTheme: materialLightListTileThemeData,
   appBarTheme: materialLightAppBarTheme,
   inputDecorationTheme: appLightInputDecorationTheme,
-  
+  drawerTheme: appLightDrawerThemeData,
+  textSelectionTheme: appLightTextSelectionThemeData,
 
 
 
@@ -140,4 +143,6 @@ ThemeData appDarkThemeData = ThemeData(
   listTileTheme: materialDarkListTileThemeData,
   appBarTheme: materialDarkAppBarTheme,
   inputDecorationTheme: appDarkInputDecoationTheme,
+  drawerTheme: appDarkDrawerThemeData,
+  textSelectionTheme: appDarkTextSelectionThemeData,
 );

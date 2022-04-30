@@ -15,27 +15,27 @@ import 'package:flutter_themes/src/presentation/themes/theme_shadows.dart';
 
 
 final IconThemeData appMaterialLightIconThemeData = IconThemeData(
-  color: appLightColorScheme.secondary,
-  size: 32,
+  color: appLightColorScheme.onSurface,
+  size: 24,
   shadows: iconLightShadows,
 );
 
 final IconThemeData appMaterialDarkIconThemeData = IconThemeData(
-  color: appDarkColorScheme.secondary,
-  size: 32,
+  color: appDarkColorScheme.onSurface,
+  size: 24,
   shadows: iconDarkShadows,
 );
 
 // ignore: prefer-correct-identifier-length
 final IconThemeData appMaterialLightPrimaryIconTheme = IconThemeData(
-  color: appLightColorScheme.primaryContainer,
-  size: 32,
+  color: appLightColorScheme.onPrimary,
+  size: 24,
   shadows: iconLightShadows,
 );
 
 // ignore: prefer-correct-identifier-length
 final IconThemeData appMaterialDarkPrimaryIconTheme = IconThemeData(
-  color: appDarkColorScheme.primaryContainer,
-  size: 32,
+  color: appDarkColorScheme.onPrimary,
+  size: 24,
   shadows: iconDarkShadows,
 );

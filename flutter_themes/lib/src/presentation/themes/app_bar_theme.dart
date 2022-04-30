@@ -15,13 +15,13 @@ import 'package:flutter_themes/src/presentation/themes/theme_defaults.dart';
 
 
 final AppBarTheme materialLightAppBarTheme = AppBarTheme(
-  color: appLightColorScheme.primary,
+  backgroundColor: appLightColorScheme.surface,
   shape: const SquircleBorder(
     radius: BorderRadius.all(
       Radius.circular(10.0),
     ),
   ),
-  foregroundColor: appLightColorScheme.onPrimary,
+  foregroundColor: appLightColorScheme.onSurface,
   elevation: appBarElevation,
   shadowColor: Colors.transparent,
   centerTitle: true,
@@ -30,29 +30,40 @@ final AppBarTheme materialLightAppBarTheme = AppBarTheme(
   titleSpacing: 2,
   toolbarHeight: 56,
   systemOverlayStyle: SystemUiOverlayStyle.light,
+  titleTextStyle: appBarLightTitleStyle,
+  toolbarTextStyle: appBarLightToolbarStyle,
 );
 
 // ignore: prefer-correct-identifier-length
 final IconThemeData materialLightAppBarIconThemeData = IconThemeData(
-  color: appLightColorScheme.onPrimary,
-  opacity: 0.05,
+  color: appLightColorScheme.onSurface,
+  opacity: 0.00,
   size: 32,
 );
 
 // ignore: prefer-correct-identifier-length
 final IconThemeData materialLightAppBarActionsIconThemeData = IconThemeData(
-  color: appLightColorScheme.onPrimary,
-  opacity: 0.05,
+  color: appLightColorScheme.onSurface,
+  opacity: 0.00,
   size: 32,
 );
 
+TextStyle appBarLightTitleStyle = TextStyle(
+  color: appLightColorScheme.onSurface,
+  
+);
+
+TextStyle appBarLightToolbarStyle = TextStyle(
+  color: appLightColorScheme.onSurface,
+);
+
 final AppBarTheme materialDarkAppBarTheme = AppBarTheme(
-  color: appDarkColorScheme.primary,
+  backgroundColor: appDarkColorScheme.surface,
   shape: RoundedRectangleBorder(
     borderRadius: const BorderRadius.all(Radius.circular(10)),
     side: BorderSide(color: appDarkColorScheme.primaryContainer),
   ),
-  foregroundColor: appDarkColorScheme.onPrimary,
+  foregroundColor: appDarkColorScheme.onSurface,
   elevation: appBarElevation,
   shadowColor: Colors.transparent,
   centerTitle: false,
@@ -61,18 +72,29 @@ final AppBarTheme materialDarkAppBarTheme = AppBarTheme(
   titleSpacing: 2,
   toolbarHeight: 56,
   systemOverlayStyle: SystemUiOverlayStyle.dark,
+  titleTextStyle: appBarDarkTitleStyle,
+  toolbarTextStyle: appBarDarkToolbarStyle,
 );
 
 // ignore: prefer-correct-identifier-length
 final IconThemeData materialDarkAppBarIconThemeData = IconThemeData(
-  color: appDarkColorScheme.onPrimary,
-  opacity: 0.05,
+  color: appDarkColorScheme.onSurface,
+  opacity: 0.00,
   size: 32,
 );
 
 // ignore: prefer-correct-identifier-length
 final IconThemeData materialDarkAppBarActionsIconThemeData = IconThemeData(
-  color: appDarkColorScheme.onPrimary,
-  opacity: 0.05,
+  color: appDarkColorScheme.onSurface,
+  opacity: 0.00,
   size: 32,
+);
+
+TextStyle appBarDarkTitleStyle = TextStyle(
+  color: appDarkColorScheme.onSurface,
+  
+);
+
+TextStyle appBarDarkToolbarStyle = TextStyle(
+  color: appDarkColorScheme.onSurface,
 );
