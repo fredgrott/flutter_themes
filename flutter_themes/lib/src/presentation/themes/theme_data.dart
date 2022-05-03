@@ -13,7 +13,7 @@ import 'package:flutter_themes/src/presentation/themes/app_bar_theme.dart';
 import 'package:flutter_themes/src/presentation/themes/app_brand_colors.dart';
 import 'package:flutter_themes/src/presentation/themes/app_colors.dart';
 import 'package:flutter_themes/src/presentation/themes/bar_button_theme_data.dart';
-import 'package:flutter_themes/src/presentation/themes/button_theme_data.dart';
+
 import 'package:flutter_themes/src/presentation/themes/card_theme_data.dart';
 import 'package:flutter_themes/src/presentation/themes/divider_theme_data.dart';
 import 'package:flutter_themes/src/presentation/themes/drawer_theme_data.dart';
@@ -28,6 +28,13 @@ import 'package:flutter_themes/src/presentation/themes/text_theme.dart';
 import 'package:flutter_themes/src/presentation/themes/theme_defaults.dart';
 import 'package:flutter_themes/src/presentation/themes/tooltip_theme_data.dart';
 import 'package:flutter_themes/src/presentation/themes/typography.dart';
+
+// Gist: Obsolete themes that should not be reference in theme data:
+//           button theme
+//           bottom navigation bar theme data
+//           bottom app bar theme data
+
+
 
 ThemeData appLightThemeData = ThemeData(
   applyElevationOverlayColor: true,
@@ -74,7 +81,6 @@ ThemeData appLightThemeData = ThemeData(
   primaryIconTheme: appMaterialLightPrimaryIconTheme,
   cardTheme: appLightCardTheme,
   elevatedButtonTheme: appMaterialLightElevatedButtonThemeData,
-  buttonTheme: materialLightButtonThemeData,
   textButtonTheme: appMaterialLightTextButtonThemeData,
   outlinedButtonTheme: appMaterialLightOutlinedButtonThemeData,
   dividerTheme: appMaterialLightDividerThemeData,
@@ -136,7 +142,6 @@ ThemeData appDarkThemeData = ThemeData(
   primaryIconTheme: appMaterialDarkPrimaryIconTheme,
   elevatedButtonTheme: appMaterialDarkElevatedButtonThemeData,
   cardTheme: appDarkCardTheme,
-  buttonTheme: materialDarkButtonThemeData,
   textButtonTheme: appMaterialDarkTextButtonThemeData,
   outlinedButtonTheme: appMaterialDarkOutlinedButtonThemeData,
   dividerTheme: appMaterialDarkDividerThemeData,
