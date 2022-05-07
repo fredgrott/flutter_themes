@@ -2,7 +2,11 @@
 
 ![image header](./media/repo-image-header.jpg)
 
-This is the base of themes I am re-using for my UI-Kits, apps, and Flutter Design App book series. Keep in mind this is tied to the beta channel. That being said, fork it and re-use and modify for all your own uses.
+This is the base of themes I am re-using for my UI-Kits, apps, and Flutter Design App book series. 
+
+That is probably a hint that my first mini-book on Flutter will 
+be on Flutter Themes and probably this code base will be the zip 
+extra component included with that mini-book ebook.
 
 ## About Fred Grott 
 I use KeyBase for my communications:

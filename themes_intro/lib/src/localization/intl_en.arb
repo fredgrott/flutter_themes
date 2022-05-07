@@ -1,0 +1,6 @@
+{
+  "appTitle": "themes_intro",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}
