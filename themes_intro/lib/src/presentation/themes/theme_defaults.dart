@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:themes_intro/src/presentation/themes/app_colors.dart';
 
-
 final Brightness appBrightness =
     SchedulerBinding.instance.window.platformBrightness;
 
@@ -50,8 +49,38 @@ const double buttonTextFocused = 0.0;
 const double buttonTextPressed = 0.0;
 
 const double dropmenuElevation = 3.0;
+
 const double drawerModalElevation = 1.0;
 const double drawerStandardElevation = 0.0;
+const double drawerWidth = 360;
+
+// Note: ListTile Properties:
+//            selectedColor is the color when tile selected of
+//                  -icons
+//                  -text
+//
+//         Thus only need to worry about in drawers icons, text, and selected color
+
+Color drawerHeaderTextColorLight = appLightColorScheme.onSurfaceVariant;
+Color drawerHeaderTextColorDark = appDarkColorScheme.onSurfaceVariant;
+
+Color drawerListTileIconColorLight = appLightColorScheme.onSurfaceVariant;
+Color drawerListTileIconColorDark = appDarkColorScheme.onSurfaceVariant;
+Color drawerListTileTextColorLight = appLightColorScheme.onSurfaceVariant;
+Color drawerListTileTextColorDark = appDarkColorScheme.onSurfaceVariant;
+
+Color drawerListTileSelectedIconTextColorLight = appLightColorScheme.secondaryContainer;
+Color drawerListTileSelectedIconTextColorDark = appDarkColorScheme.secondaryContainer;
+
+Color drawerListTileColorLight = appLightColorScheme.onSecondary;
+Color drawerListTileColorDark = appDarkColorScheme.onSecondary;
+
+
+
+Color drawerListTileSelectedColorLight =
+    appLightColorScheme.secondaryContainer;
+Color drawerListTileSelectedColorDark = appDarkColorScheme.secondaryContainer;
+
 const double cardElevation = 1.0;
 const double chipElevatedEnabled = 1.0;
 const double chipElevatedDisabled = 0.0;

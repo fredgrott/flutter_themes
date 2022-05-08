@@ -69,7 +69,7 @@ ThemeData appLightThemeData = ThemeData(
       ),
   ),
 
-  drawerTheme: appMaterialLightDrawerThemeData.copyWith(
+  drawerTheme: appMaterialLightModalDrawerThemeData.copyWith(
     // we override the MD3 shape def here with my own design tweak
     shape: const SquircleBorder(
       radius: BorderRadius.only(
@@ -147,7 +147,7 @@ ThemeData appDarkThemeData = ThemeData(
     ),
   ),
 
-  drawerTheme: appMaterialDarkDrawerThemeData.copyWith(
+  drawerTheme: appMaterialDarkModalDrawerThemeData.copyWith(
     // we override the MD3 shape def here with my own design tweak
     shape: const SquircleBorder(
       radius: BorderRadius.only(

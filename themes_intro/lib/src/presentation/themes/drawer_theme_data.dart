@@ -6,41 +6,60 @@
 
 import 'package:flutter/material.dart';
 import 'package:themes_intro/src/presentation/themes/app_colors.dart';
+import 'package:themes_intro/src/presentation/themes/theme_defaults.dart';
 
-// Gist: Note under MD3 Modals never ever have surfacetins applied. But, we have 
-//       a situation in adaptive navigation where we can have a standard drawer 
-//       that is pernament displayed in which we then have to handle doing 
+// Gist: Note under MD3 Modals never ever have surfacetins applied. But, we have
+//       a situation in adaptive navigation where we can have a standard drawer
+//       that is pernament displayed in which we then have to handle doing
 //       the correct opacity for background and primary mixed.
 //
-//       The way to handle standard drawer with surface tint is to override 
-//       background color at the shared scaffold level and use the 
-//       material color utilities package, speicifically the Belnd hamronize 
-//       with the inputs being background color and primary and make sure 
+//       The way to handle standard drawer with surface tint is to override
+//       background color at the shared scaffold level and use the
+//       material color utilities package, speicifically the Belnd hamronize
+//       with the inputs being background color and primary and make sure
 //       ot apply opacity to primary input befroe the Belnd.hamronize function.
 
-
-DrawerThemeData appMaterialLightDrawerThemeData = DrawerThemeData(
+DrawerThemeData appMaterialLightModalDrawerThemeData = DrawerThemeData(
   backgroundColor: appLightColorScheme.background,
   // md3 modal has neutralVariant 20
   scrimColor: appLightScrimColor,
   // MD3 modal is 1.0 and standard is 0.0
-  elevation: 0.0,
+  elevation: drawerModalElevation,
 
-  
 
   //MD3 360dp
-  width: 360,
+  width: drawerWidth,
 );
 
-DrawerThemeData appMaterialDarkDrawerThemeData = DrawerThemeData(
+DrawerThemeData appMaterialDarkModalDrawerThemeData = DrawerThemeData(
   backgroundColor: appDarkColorScheme.background,
   // md3 modal has neutralVariant 20
   scrimColor: appDarkScrimColor,
   // MD3 modal is 1.0 and standard is 0.0
-  elevation: 0.0,
-
-  
+  elevation: drawerModalElevation,
 
   //MD3 360dp
-  width: 360,
+  width: drawerWidth,
+);
+
+DrawerThemeData appMaterialLightStandardDrawerThemeData = DrawerThemeData(
+  backgroundColor: appLightColorScheme.background,
+  // md3 modal has neutralVariant 20
+  scrimColor: appLightScrimColor,
+  // MD3 modal is 1.0 and standard is 0.0
+  elevation: drawerStandardElevation,
+
+  //MD3 360dp
+  width: drawerWidth,
+);
+
+DrawerThemeData appMaterialDarkStandardDrawerThemeData = DrawerThemeData(
+  backgroundColor: appDarkColorScheme.background,
+  // md3 modal has neutralVariant 20
+  scrimColor: appLightScrimColor,
+  // MD3 modal is 1.0 and standard is 0.0
+  elevation: drawerStandardElevation,
+
+  //MD3 360dp
+  width: drawerWidth,
 );
