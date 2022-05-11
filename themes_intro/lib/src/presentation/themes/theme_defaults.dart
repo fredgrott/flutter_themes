@@ -69,30 +69,32 @@ Color drawerListTileIconColorDark = appDarkColorScheme.onSurfaceVariant;
 Color drawerListTileTextColorLight = appLightColorScheme.onSurfaceVariant;
 Color drawerListTileTextColorDark = appDarkColorScheme.onSurfaceVariant;
 
-Color drawerListTileSelectedIconTextColorLight = appLightColorScheme.secondaryContainer;
-Color drawerListTileSelectedIconTextColorDark = appDarkColorScheme.secondaryContainer;
+Color drawerListTileSelectedIconTextColorLight =
+    appLightColorScheme.secondaryContainer;
+Color drawerListTileSelectedIconTextColorDark =
+    appDarkColorScheme.secondaryContainer;
 
 Color drawerListTileColorLight = appLightColorScheme.onSecondary;
 Color drawerListTileColorDark = appDarkColorScheme.onSecondary;
 
-
-
-Color drawerListTileSelectedColorLight =
-    appLightColorScheme.secondaryContainer;
+Color drawerListTileSelectedColorLight = appLightColorScheme.secondaryContainer;
 Color drawerListTileSelectedColorDark = appDarkColorScheme.secondaryContainer;
 
-const double cardElevation = 1.0;
+const double elevatedCardElevation = 1.0;
+
 const double chipElevatedEnabled = 1.0;
 const double chipElevatedDisabled = 0.0;
 const double chipElevatedHovered = 3.0;
 const double chipElevatedFocused = 1.0;
 const double chipElevatedPressed = 1.0;
 const double chipElvattedDragged = 8.0;
-
+// MD3 MD2 splash colors too dark on dark so going route of
+// secondary with opacity
 const Color appMaterialLightHighLightColor = Color(0x29000000);
-const Color appMaterialLightSplashColor = Color(0x1f000000);
+final Color appMaterialLightSplashColor =
+    appLightColorScheme.secondary.withOpacity(0.75);
 const Color appMaterialDarkHighLightColor = Color(0x29ffffff);
-const Color appMaterialDarkSplashColor = Color(0x1fffffff);
+final Color appMaterialDarkSplashColor = appDarkColorScheme.secondary.withOpacity(0.75);
 
 // ignore: prefer-correct-identifier-length
 final Color appMaterialLightPrimarySurfaceColor = appLightColorScheme.primary;

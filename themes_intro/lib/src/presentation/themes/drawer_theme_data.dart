@@ -19,46 +19,21 @@ import 'package:themes_intro/src/presentation/themes/theme_defaults.dart';
 //       with the inputs being background color and primary and make sure
 //       ot apply opacity to primary input befroe the Belnd.hamronize function.
 
-DrawerThemeData appMaterialLightModalDrawerThemeData = DrawerThemeData(
+DrawerThemeData appMaterialLightDrawerThemeData = DrawerThemeData(
   backgroundColor: appLightColorScheme.background,
   // md3 modal has neutralVariant 20
   scrimColor: appLightScrimColor,
-  // MD3 modal is 1.0 and standard is 0.0
-  elevation: drawerModalElevation,
-
+ 
 
   //MD3 360dp
   width: drawerWidth,
 );
 
-DrawerThemeData appMaterialDarkModalDrawerThemeData = DrawerThemeData(
+DrawerThemeData appMaterialDarkDrawerThemeData = DrawerThemeData(
   backgroundColor: appDarkColorScheme.background,
   // md3 modal has neutralVariant 20
   scrimColor: appDarkScrimColor,
-  // MD3 modal is 1.0 and standard is 0.0
-  elevation: drawerModalElevation,
 
-  //MD3 360dp
-  width: drawerWidth,
-);
-
-DrawerThemeData appMaterialLightStandardDrawerThemeData = DrawerThemeData(
-  backgroundColor: appLightColorScheme.background,
-  // md3 modal has neutralVariant 20
-  scrimColor: appLightScrimColor,
-  // MD3 modal is 1.0 and standard is 0.0
-  elevation: drawerStandardElevation,
-
-  //MD3 360dp
-  width: drawerWidth,
-);
-
-DrawerThemeData appMaterialDarkStandardDrawerThemeData = DrawerThemeData(
-  backgroundColor: appDarkColorScheme.background,
-  // md3 modal has neutralVariant 20
-  scrimColor: appLightScrimColor,
-  // MD3 modal is 1.0 and standard is 0.0
-  elevation: drawerStandardElevation,
 
   //MD3 360dp
   width: drawerWidth,

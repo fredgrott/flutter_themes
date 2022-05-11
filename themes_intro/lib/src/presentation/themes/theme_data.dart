@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:themes_intro/src/presentation/themes/app_bar_theme.dart';
 import 'package:themes_intro/src/presentation/themes/app_brand_colors.dart';
 import 'package:themes_intro/src/presentation/themes/app_colors.dart';
+import 'package:themes_intro/src/presentation/themes/card_theme.dart';
 import 'package:themes_intro/src/presentation/themes/drawer_theme_data.dart';
 import 'package:themes_intro/src/presentation/themes/elevated_button_theme_data.dart';
 import 'package:themes_intro/src/presentation/themes/icon_theme_data.dart';
@@ -69,7 +70,9 @@ ThemeData appLightThemeData = ThemeData(
       ),
   ),
 
-  drawerTheme: appMaterialLightModalDrawerThemeData.copyWith(
+  cardTheme: appMaterialLightCardTheme,
+
+  drawerTheme: appMaterialLightDrawerThemeData.copyWith(
     // we override the MD3 shape def here with my own design tweak
     shape: const SquircleBorder(
       radius: BorderRadius.only(
@@ -147,7 +150,9 @@ ThemeData appDarkThemeData = ThemeData(
     ),
   ),
 
-  drawerTheme: appMaterialDarkModalDrawerThemeData.copyWith(
+  cardTheme: appMaterialDarkCardTheme,
+
+  drawerTheme: appMaterialDarkDrawerThemeData.copyWith(
     // we override the MD3 shape def here with my own design tweak
     shape: const SquircleBorder(
       radius: BorderRadius.only(
