@@ -110,8 +110,8 @@ Color getOverlayColor(Set<MaterialState> states) {
 
   if (states.contains(MaterialState.dragged)){
     return appBrightness == Brightness.dark
-        ? appDarkColorScheme.surfaceVariant
-        : appLightColorScheme.surfaceVariant;
+        ? appDarkColorScheme.surfaceVariant.withOpacity(0.06)
+        : appLightColorScheme.surfaceVariant.withOpacity(0.06);
   }
 
   if (states.contains(MaterialState.focused)) {
@@ -120,10 +120,13 @@ Color getOverlayColor(Set<MaterialState> states) {
         : appLightColorScheme.surfaceVariant;
   }
 
+  // my cheat as the diff between default elevation for opacity is
+  // elevation 1(1.0) is 0.05 and elevation 2(3.0) is 0.08 hence setting it 
+  // to 0.03 to fake it
   if (states.contains(MaterialState.hovered)) {
     return appBrightness == Brightness.dark
-        ? appDarkColorScheme.surfaceVariant
-        : appLightColorScheme.surfaceVariant;
+        ? appDarkColorScheme.surfaceVariant.withOpacity(0.03)
+        : appLightColorScheme.surfaceVariant.withOpacity(0.03);
   }
 
 

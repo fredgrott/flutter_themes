@@ -14,6 +14,8 @@ extra component included with that mini-book ebook.
 
 ## Articles
 
+[Where In The Flutter SDK Is Material Design 3 Elevated Card](https://fredgrott.medium.com/where-in-the-flutter-sdk-is-material-design-3-elevated-card-6322410dce6c?sk=a27ad82db5b22b7c90a89e8cb5002a71)
+
 [Flutter Best Practices, AppBar Themes The Right Way](https://fredgrott.medium.com/flutter-best-practices-appbar-themes-the-right-way-85a19dee1718?sk=28a2d7a3609fe607ccdb5b80cd811528)
 
 [Maintaining A Material Design 3 Base In Flutter Themes](https://fredgrott.medium.com/maintaining-a-material-design-3-base-in-flutter-themes-7b6214cbdbc3?sk=441a9702d1b8ef98d7d9a974f81d1ede)
